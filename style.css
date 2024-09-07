@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px 30px;
+}
+
+nav h1 {
+    color: white;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.menu-section {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.menu-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-card p {
+    font-size: 18px;
+    padding: 10px;
+    color: #333;
+}
+
+.menu-card button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.menu-card button:hover {
+    background-color: #0056b3;
+}
+
+/* ค่อยๆ fade show box */
+
+.menu-card {
+    opacity: 0; /* เริ่มต้นด้วยการซ่อน */
+    transform: translateY(20px); /* เริ่มต้นจากการเลื่อนลง */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* เพิ่ม transition */
+}
+
+.menu-card.show {
+    opacity: 1; /* เมื่อแสดงจะปรากฏ */
+    transform: translateY(0); /* เลื่อนกลับไปยังตำแหน่งปกติ */
+}
